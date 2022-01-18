@@ -1,7 +1,6 @@
 ---
 author: SK
 title: 8-bit-Musik
-date: \today
 presentation:
   theme: blood.css
   fragments: true
