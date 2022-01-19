@@ -228,18 +228,22 @@ pre[data-line] .line-highlight[data-end]:after {
 </section><section lineno="27" class="slide " data-line="27" data-h="2" data-v="0">
 <h4 id="tonerzeugung">Tonerzeugung</h4>
 <ul>
-<li class="fragment" data-fragment-index="1">An-/Ausschalten <!-- .fragment data-fragment-index="1" --></li>
-<li class="fragment" data-fragment-index="2">(Sinus-)Wellenform <!-- .fragment data-fragment-index="2" --> aber: <!-- .fragment data-fragment-index="3" --></li>
-<li class="fragment" data-fragment-index="4">CPU-Blocking <!-- .fragment data-fragment-index="4" --></li>
-<li class="fragment" data-fragment-index="5">mehrere Kan&#xE4;le schwierig <!-- .fragment data-fragment-index="5" --></li>
+<li class="fragment" data-fragment-index="1"><p>An-/Ausschalten <!-- .fragment data-fragment-index="1" --></p></li>
+<li class="fragment" data-fragment-index="2"><p>Wellenformen: Rechteck-, Sinus-, S&#xE4;gezahnspannung, Wei&#xDF;es Rauschen <!-- .fragment data-fragment-index="2" --></p></li>
+<li class="fragment" data-fragment-index="3"><p>Samples <!-- .fragment data-fragment-index="3" --></p></li>
+<li class="fragment" data-fragment-index="4"><p>aber: <!-- .fragment data-fragment-index="4" --></p>
+<ul>
+<li class="fragment" data-fragment-index="5"><p>CPU-Blocking <!-- .fragment data-fragment-index="5" --></p></li>
+<li class="fragment" data-fragment-index="6"><p>mehrere Kan&#xE4;le schwierig <!-- .fragment data-fragment-index="6" --></p></li>
+</ul></li>
 </ul>
-</section><section><section lineno="36" class="slide " data-line="36" data-h="3" data-v="0">
+</section><section><section lineno="40" class="slide " data-line="40" data-h="3" data-v="0">
 <h4 id="l&#xF6;sung-dedizierte-soundchips">L&#xF6;sung: dedizierte Soundchips</h4>
 <ul>
 <li class="fragment" data-fragment-index="3">Nintendo: Ricoh RP2A03 <!-- .fragment data-fragment-index="3" -->
 <ul>
 <li><strong>P</strong>rogrammable <strong>S</strong>ound <strong>G</strong>enerator</li>
-<li>3+1+1 Stimmen: Rechteck-, Sinus-, S&#xE4;gezahnspannung, Wei&#xDF;es Rauschen, Samples</li>
+<li>3+1+1 Stimmen: 2x pulse-, 1x triangular wave, 1x white noise, Samplekanal</li>
 </ul></li>
 <li class="fragment" data-fragment-index="4">C64 <!-- .fragment data-fragment-index="4" -->
 <ul>
@@ -247,13 +251,13 @@ pre[data-line] .line-highlight[data-end]:after {
 <li><strong>S</strong>ound <strong>I</strong>nterface <strong>D</strong>evice</li>
 <li>3 Stimmen, jeweils bis zu 4 kombinierbare Wellenformen</li>
 </ul></li>
-<li class="fragment" data-fragment-index="5">Stand der Technik bis zur Einf&#xFC;hrung richtiger Soundkarten (mehrkanal, &#x201C;Vereinheitlichung&#x201D;&#x2026;) <!-- .fragment data-fragment-index="5" --></li>
+<li class="fragment" data-fragment-index="5">Stand der Technik bis zur Einf&#xFC;hrung richtiger Soundkarten (mehr Kan&#xE4;le, &#x201C;Vereinheitlichung&#x201D;&#x2026;) <!-- .fragment data-fragment-index="5" --></li>
 </ul>
-</section><section vertical="true" lineno="48" class="slide " data-line="48" data-h="3" data-v="1">
+</section><section vertical="true" lineno="52" class="slide " data-line="52" data-h="3" data-v="1">
 <h3 id="nes-sound-channels">NES Sound Channels</h3>
-<iframe width="600" height="400" src="https://www.youtube.com/embed/la3coK5pq5w">
+<iframe width="800" height="600" src="https://www.youtube.com/embed/la3coK5pq5w">
 </iframe>
-</section></section><section><section lineno="52" class="slide " data-line="52" data-h="4" data-v="0">
+</section></section><section><section lineno="57" class="slide " data-line="57" data-h="4" data-v="0">
 <p>Codebeispiel:</p>
 <p><a href="http://cbm.6502.org/alternative/c64_de/c64_de.pdf">C64 Handbuch</a> S. 90</p>
 <pre class="text language-text language-basic" data-role="codeBlock" data-info="basic"><span class="token number">10</span> <span class="token comment"><span class="token keyword keyword-rem">rem</span> michael row the boat ashore</span>
@@ -269,11 +273,11 @@ pre[data-line] .line-highlight[data-end]:after {
 <span class="token number">110</span> data17<span class="token punctuation">,</span><span class="token number">103</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">,</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token number">237</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">,</span><span class="token number">26</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token number">237</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">26</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">,</span><span class="token number">29</span><span class="token punctuation">,</span><span class="token number">69</span><span class="token punctuation">,</span><span class="token number">250</span>
 <span class="token number">120</span> data26<span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">,</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token number">237</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">,</span><span class="token number">26</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">,</span><span class="token number">29</span><span class="token punctuation">,</span><span class="token number">69</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">,</span><span class="token number">26</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">250</span>
 <span class="token number">130</span> <span class="token keyword keyword-data">data</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span></pre>
-</section><section vertical="true" lineno="73" class="slide " data-line="73" data-h="4" data-v="1">
+</section><section vertical="true" lineno="79" class="slide " data-line="79" data-h="4" data-v="1">
 <p>N3rdroom - Beispiel Feuerwerk(sound)</p>
 <iframe width="600" height="400" src="https://www.youtube.com/embed/Bc_4hgeVmEg?start=3523">
 </iframe>
-</section></section><section lineno="79" class="slide " data-line="79" data-h="5" data-v="0">
+</section></section><section lineno="85" class="slide " data-line="85" data-h="5" data-v="0">
 <h4 id="vereinfachung-der-vorgehensweise-notwendig">Vereinfachung der Vorgehensweise notwendig</h4>
 <ul>
 <li class="fragment" data-fragment-index="1">sehr aufw&#xE4;ndige Programmierung/Komposition <!-- .fragment data-fragment-index="1" -->
@@ -285,27 +289,27 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul></li>
 <li class="fragment" data-fragment-index="3">fehleranf&#xE4;llig <!-- .fragment data-fragment-index="3" --></li>
 </ul>
-</section><section lineno="94" class="slide " data-line="94" data-h="6" data-v="0">
+</section><section lineno="100" class="slide " data-line="100" data-h="6" data-v="0">
 <h4 id="beispiel-chris-h&#xFC;lsbeck-shades">Beispiel: Chris H&#xFC;lsbeck - Shades</h4>
 <p><img src="assets/Shades_C64_Listing_Chris_Huelsbeck_02.jpg"> <img src="assets/Shades_C64_Listing_Chris_Huelsbeck_03.jpg"></p>
 <p>zum Abtippen.</p>
-</section><section><section lineno="102" class="slide " data-line="102" data-h="7" data-v="0">
+</section><section><section lineno="108" class="slide " data-line="108" data-h="7" data-v="0">
 <h4 id="musikprogramme">Musikprogramme</h4>
 <p>Chris H&#xFC;lsbeck</p>
 <figure>
 <img src="assets/Soundmon.gif" alt="Chris H&#xFC;lsbeck - Soundmonitor"><figcaption aria-hidden="true">Chris H&#xFC;lsbeck - Soundmonitor</figcaption>
 </figure>
 <p><a href="https://www.youtube.com/watch?v=mITeRl6XEyk">Tutorium zum Soundmonitor</a></p>
-</section><section vertical="true" lineno="114" class="slide " data-line="114" data-h="7" data-v="1">
+</section><section vertical="true" lineno="120" class="slide " data-line="120" data-h="7" data-v="1">
 <h4 id="tracker">Tracker</h4>
 <iframe width="941" height="779" src="https://www.youtube.com/embed/5ywaCR5Tg4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-</section><section vertical="true" lineno="120" class="slide " data-line="120" data-h="7" data-v="2">
+</section><section vertical="true" lineno="126" class="slide " data-line="126" data-h="7" data-v="2">
 <h4 id="heute">Heute</h4>
 <figure>
 <img src="assets/LMMS_Synthesizer.png" alt="Musikprogramm heute"><figcaption aria-hidden="true">Musikprogramm heute</figcaption>
 </figure>
-</section></section><section lineno="126" class="slide " data-line="126" data-h="8" data-v="0">
+</section></section><section lineno="132" class="slide " data-line="132" data-h="8" data-v="0">
 <h4 id="vergleich-c64-nes">Vergleich C64 - NES</h4>
 <section>
 <p><a href="https://www.youtube.com/embed/gKXGDuKrCfA">Koji Kondo - The Legend of Zelda (Theme)</a></p>
@@ -313,80 +317,80 @@ pre[data-line] .line-highlight[data-end]:after {
 <p><a href="https://www.youtube.com/embed/uBJefYLCJ0M">Chris H&#xFC;lsbeck - Shades</a></p>
 <iframe width="800" height="320" src="https://www.youtube.com/embed/uBJefYLCJ0M"></iframe>
 </section>
-</section><section><section lineno="143" class="slide " data-line="143" data-h="9" data-v="0">
+</section><section><section lineno="149" class="slide " data-line="149" data-h="9" data-v="0">
 <h4 id="sprachsynthese">Sprachsynthese</h4>
-</section><section vertical="true" lineno="146" class="slide " data-line="146" data-h="9" data-v="1">
 <ul>
-<li><p>Wiedergabe von aufgenommener Sprache</p></li>
-<li><p>Zugriff auf und Wiedergabe von Allophonen</p></li>
-<li><p><a href="https://discordier.github.io/sam/">SAM</a>: <strong>S</strong>oftware <strong>A</strong>utomatic <strong>M</strong>outh</p></li>
+<li class="fragment" data-fragment-index="1"><p>Wiedergabe von aufgenommener Sprache <!-- .fragment data-fragment-index="1" --></p></li>
+<li class="fragment" data-fragment-index="2"><p>Zugriff auf und Wiedergabe von Allophonen <!-- .fragment data-fragment-index="2" --></p></li>
+<li class="fragment" data-fragment-index="3"><p><a href="https://discordier.github.io/sam/">SAM</a>: <strong>S</strong>oftware <strong>A</strong>utomatic <strong>M</strong>outh <!-- .fragment data-fragment-index="3" --></p></li>
 </ul>
-</section><section vertical="true" lineno="154" class="slide " data-line="154" data-h="9" data-v="2">
+</section><section vertical="true" lineno="158" class="slide " data-line="158" data-h="9" data-v="1">
 <h4 id="sam-kann-singen">SAM kann singen</h4>
 <figure>
 <audio src="assets/sing.wav" controls><a href="assets/sing.wav">SAM singing</a></audio><figcaption aria-hidden="true">SAM singing</figcaption>
 </figure>
-</section><section vertical="true" lineno="158" class="slide " data-line="158" data-h="9" data-v="3">
-</section></section><section lineno="161" class="slide " data-line="161" data-h="10" data-v="0">
+</section></section><section lineno="165" class="slide " data-line="165" data-h="10" data-v="0">
 <h4 id="bit-vs-8-bit">16-bit vs 8-bit</h4>
-<iframe src="https://www.youtube.com/embed/r9jPppUMbCo">
+<iframe width="600" height="400" src="https://www.youtube.com/embed/r9jPppUMbCo">
 </iframe>
-</section><section><section lineno="166" class="slide " data-line="166" data-h="11" data-v="0">
+</section><section><section lineno="170" class="slide " data-line="170" data-h="11" data-v="0">
 <h4 id="bit-8-bitish-">8bit - 8-bitish - &#x2026;</h4>
+<p>Abgrenzung:</p>
 <ul>
-<li class="fragment" data-fragment-index="1">eingesetzte Technik <!-- .fragment data-fragment-index="1" -->
+<li class="fragment" data-fragment-index="1"><p>eingesetzte Technik <!-- .fragment data-fragment-index="1" --></p>
 <ul>
 <li class="fragment" data-fragment-index="1">Beachtung der technischen Limitierungen <!-- .fragment data-fragment-index="1" --></li>
 </ul></li>
-<li class="fragment" data-fragment-index="2">eingesetzter Sound <!-- .fragment data-fragment-index="2" --></li>
+<li class="fragment" data-fragment-index="2"><p>eingesetzter Sound <!-- .fragment data-fragment-index="2" --></p></li>
+<li class="fragment" data-fragment-index="3"><p><span class="math inline">\(\ne\)</span> Vaporwave <!-- .fragment data-fragment-index="3" --></p></li>
 </ul>
-</section><section vertical="true" lineno="175" class="slide " data-line="175" data-h="11" data-v="1">
+</section><section vertical="true" lineno="183" class="slide " data-line="183" data-h="11" data-v="1">
 <h4 id="sid-tuneschiptunes">SID-Tunes/Chiptunes</h4>
 <ul>
 <li>youtube.de</li>
 <li><a href="http://www.wothke.ch/websid/">WebSID</a> &#x2192; eigene SIDs abspielbar, z. B. von <a href="https://www.hvsc.de/downloads">HVSC</a></li>
 </ul>
-</section><section vertical="true" lineno="183" class="slide " data-line="183" data-h="11" data-v="2">
+</section><section vertical="true" lineno="191" class="slide " data-line="191" data-h="11" data-v="2">
 <h4 id="bitish">8-bitish</h4>
 <ul>
-<li><p><a href="https://www.youtube.com/watch?v=tR0OLPeDnpI&amp;list=PLUO8mnyUG2ELJtiNv4RPlgRglVttVLcpr">Weihnachts-Playlist</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=tR0OLPeDnpI&amp;list=PLUO8mnyUG2ELJtiNv4RPlgRglVttVLcpr">Weihnachts-Playlist</a> (Forum)</p></li>
 <li><p><a href="https://www.youtube.com/watch?v=gX1lNoC_aQs">Arvo P&#xE4;rt - Tabula Rasa</a></p></li>
 </ul>
 <section>
 <iframe width="800" height="600" src="https://www.youtube.com/embed/xb0cMDEyMzg?start=1568">
 </iframe>
 </section>
-</section><section vertical="true" lineno="195" class="slide " data-line="195" data-h="11" data-v="3">
+<ul>
+<li>Nintendocore
+<ul>
+<li>Horse The Band</li>
+<li>iamerror</li>
+<li>&#x2026;</li>
+</ul></li>
+</ul>
+</section><section vertical="true" lineno="208" class="slide " data-line="208" data-h="11" data-v="3">
 <h4 id="k&#xFC;nstlerische-durchbrechung">k&#xFC;nstlerische Durchbrechung</h4>
 <iframe width="800" height="600" src="https://www.youtube.com/embed/qi5N2tq5VpQ?start=1923">
 </iframe>
 <p>Welle:Erdball@Breakpoint 2006</p>
-</section><section vertical="true" lineno="206" class="slide " data-line="206" data-h="11" data-v="4">
-<ul>
-<li><p>Abgrenzung zu Vaporwave</p></li>
-<li><p>Nintendocore</p>
-<ul>
-<li>Horse The Band</li>
-<li>iamerror</li>
-</ul></li>
-</ul>
-</section><section vertical="true" lineno="213" class="slide " data-line="213" data-h="11" data-v="5">
-</section><section vertical="true" lineno="214" class="slide " data-line="214" data-h="11" data-v="6">
-</section><section vertical="true" lineno="215" class="slide " data-line="215" data-h="11" data-v="7">
-</section><section vertical="true" lineno="216" class="slide " data-line="216" data-h="11" data-v="8">
-</section><section vertical="true" lineno="217" class="slide " data-line="217" data-h="11" data-v="9">
-</section><section vertical="true" lineno="218" class="slide " data-line="218" data-h="11" data-v="10">
-</section><section vertical="true" lineno="219" class="slide " data-line="219" data-h="11" data-v="11">
+</section><section vertical="true" lineno="219" class="slide " data-line="219" data-h="11" data-v="4">
+</section><section vertical="true" lineno="220" class="slide " data-line="220" data-h="11" data-v="5">
+</section><section vertical="true" lineno="221" class="slide " data-line="221" data-h="11" data-v="6">
+</section><section vertical="true" lineno="222" class="slide " data-line="222" data-h="11" data-v="7">
+</section><section vertical="true" lineno="223" class="slide " data-line="223" data-h="11" data-v="8">
+</section><section vertical="true" lineno="224" class="slide " data-line="224" data-h="11" data-v="9">
+</section><section vertical="true" lineno="225" class="slide " data-line="225" data-h="11" data-v="10">
+</section><section vertical="true" lineno="226" class="slide " data-line="226" data-h="11" data-v="11">
 <iframe width="800" height="600" src="https://www.youtube.com/embed/QH2-TGUlwu4" data-autoplay>
 </iframe>
 <p>&#x1F31F; &#x1F373; &#x1F31F; &#x1F373; &#x1F31F;</p>
-</section></section><section data-notes="Feelen dunk fur oiree Oufmirksamkayt. Geepts noc fragen?" lineno="225" class="slide " data-line="225" data-h="12" data-v="0">
+</section></section><section data-notes="Feelen dunk fur oiree Oufmirksamkayt. Geepts noc fragen?" lineno="232" class="slide " data-line="232" data-h="12" data-v="0">
 <h3 id="vielen-dank">Vielen Dank</h3>
-</section><section lineno="230" class="slide " data-line="230" data-h="13" data-v="0">
+</section><section lineno="237" class="slide " data-line="237" data-h="13" data-v="0">
 <figure>
 <img src="assets/emulators.gif" alt="Quelle: welle:erdball"><figcaption aria-hidden="true">Quelle: welle:erdball</figcaption>
 </figure>
-</section><section lineno="235" class="slide " data-line="235" data-h="14" data-v="0">
+</section><section lineno="242" class="slide " data-line="242" data-h="14" data-v="0">
 <h4 id="quellen">Quellen</h4>
 </section>
       </div>
